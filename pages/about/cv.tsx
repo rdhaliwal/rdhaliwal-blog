@@ -6,7 +6,7 @@
 
 // export default ({ children }) => <BlogEntry {...meta}> {children} </BlogEntry>;
 
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import fs from 'node:fs';
 import path from 'node:path';
 import { Fragment } from 'react';
@@ -26,9 +26,7 @@ interface CvPageProps {
   contentHtml: string;
 }
 
-export const getServerSideProps: GetServerSideProps<
-  CvPageProps
-> = async _context => {
+export const getStaticProps: GetStaticProps<CvPageProps> = async _context => {
   const contentHtml = await convertMarkdownToHtml(['pages', 'about', 'cv.md']);
 
   return {
