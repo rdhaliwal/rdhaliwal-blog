@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import styles from '../styles/Home.module.css';
 // import { Inter } from '@next/font/google';
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -23,8 +24,8 @@ const Home = () => {
           <Blob className={styles.blob2} />
           <Blob className={styles.blob3} />
           */}
-        <div>
-          <div>
+        <div className={styles.wrapper}>
+          <div className={styles.main}>
             <h1>Hello! My name is Randeep</h1>
             <p>
               I&apos;m an Australian-based front-end developer. I&apos;ve got

@@ -1,17 +1,10 @@
-// import BlogEntry from '../../components/BlogEntry';
-
-// export const meta = {
-//   title: 'Curriculum vitae',
-// };
-
-// export default ({ children }) => <BlogEntry {...meta}> {children} </BlogEntry>;
-
 import { GetStaticProps } from 'next';
 import fs from 'node:fs';
 import path from 'node:path';
 import { Fragment } from 'react';
 import { remark } from 'remark';
 import html from 'remark-html';
+import styles from './cv.module.css';
 
 const convertMarkdownToHtml = async (params: string[]) => {
   const fullPath = path.join(...params);
@@ -38,9 +31,12 @@ const CvPage = ({ contentHtml }: CvPageProps) => {
   return (
     <Fragment>
       <title>CV | Randeep Dhaliwal</title>
-      <meta name="description" content="CV of Randeep Dhaliwal" />
+      <meta name="description" content="Curriculum vitae of Randeep Dhaliwal" />
       <main>
-        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <div
+          className={styles.page}
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        />
       </main>
     </Fragment>
   );
