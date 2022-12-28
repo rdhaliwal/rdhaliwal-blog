@@ -29,9 +29,11 @@
 
 ### See Mode
 
-**Senior Software Engineer // Apr 2021 - Present**
+**Senior Software Engineer & Tech Lead // Apr 2021 - Present**
 
-- I literally just started. Will update with more details of my experience once i've been here a while :)
+- Front end web experience includes React, GraphQL, SASS, Fabric.JS
+- Back end experience includes Node.JS and Python
+- Infrastructure experience includes AWS (AppSync, Lambdas, CDK, RDS) , Make, Bash, Github Actions
 
 ---
 ### Redbubble
