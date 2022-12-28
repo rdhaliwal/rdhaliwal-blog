@@ -37,7 +37,7 @@ const Home = () => {
             </p>
             <p>
               If you&apos;d like to learn more, take a gander at my&nbsp;
-              <Link href="/resume">CV.</Link>
+              <Link href="/about/cv">CV.</Link>
               &nbsp; Or, feel free to get in touch by dropping me an email at:
               <br />
               hello [at] randeep [dot] dev
@@ -45,6 +45,7 @@ const Home = () => {
           </div>
         </div>
       </main>
+      {/*
       <div>
         See my Blog:
         <ul>
@@ -56,6 +57,7 @@ const Home = () => {
           </li>
         </ul>
       </div>
+      */}
     </Fragment>
   );
 };
