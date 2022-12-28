@@ -9,20 +9,18 @@
 import { GetServerSideProps } from 'next';
 import fs from 'node:fs';
 import path from 'node:path';
+import { Fragment } from 'react';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-// export async function convertMarkdownToHtml() {
-// //   const fullPath = path.join('pages', 'about', 'cv.md');
-// //   const fileContents = fs.readFileSync(fullPath, 'utf8');
-// //   // Use remark to convert markdown into HTML string
-// //   const processedContent = await remark().use(html).process(fileContents);
-// const contentHtml = 'processedContent.toString()';
-// console.log('contentHtml', contentHtml);
-// return {
-//   contentHtml,
-// };
-// }
+const convertMarkdownToHtml = async (params: string[]) => {
+  const fullPath = path.join(...params);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+  const processedContent = await remark().use(html).process(fileContents);
+  const contentHtml = processedContent.toString();
+  return contentHtml;
+};
 
 interface CvPageProps {
   contentHtml: string;
@@ -31,11 +29,7 @@ interface CvPageProps {
 export const getServerSideProps: GetServerSideProps<
   CvPageProps
 > = async _context => {
-  const fullPath = path.join('pages', 'about', 'cv.md');
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-  const processedContent = await remark().use(html).process(fileContents);
-  const contentHtml = processedContent.toString();
+  const contentHtml = await convertMarkdownToHtml(['pages', 'about', 'cv.md']);
 
   return {
     props: { contentHtml },
@@ -44,9 +38,13 @@ export const getServerSideProps: GetServerSideProps<
 
 const CvPage = ({ contentHtml }: CvPageProps) => {
   return (
-    <main>
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-    </main>
+    <Fragment>
+      <title>CV | Randeep Dhaliwal</title>
+      <meta name="description" content="CV of Randeep Dhaliwal" />
+      <main>
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      </main>
+    </Fragment>
   );
 };
 
