@@ -15,23 +15,40 @@ const convertMarkdownToHtml = async (params: string[]) => {
   return contentHtml;
 };
 
-interface CvPageProps {
-  contentHtml: string;
+interface MarkdownMetadata {
+  title: string;
+  description?: string;
 }
 
-export const getStaticProps: GetStaticProps<CvPageProps> = async _context => {
+interface MarkdownPageProps {
+  contentHtml: string;
+  metadata: MarkdownMetadata;
+}
+
+export const getStaticProps: GetStaticProps<
+  MarkdownPageProps
+> = async _context => {
   const contentHtml = await convertMarkdownToHtml(['pages', 'about', 'cv.md']);
+  const metadata: MarkdownMetadata = {
+    title: 'CV | Randeep Dhaliwal',
+    description: 'Curriculum vitae of Randeep Dhaliwal',
+  };
 
   return {
-    props: { contentHtml },
+    props: {
+      contentHtml,
+      metadata,
+    },
   };
 };
 
-const CvPage = ({ contentHtml }: CvPageProps) => {
+const MarkdownPage = ({ contentHtml, metadata }: MarkdownPageProps) => {
   return (
     <Fragment>
-      <title>CV | Randeep Dhaliwal</title>
-      <meta name="description" content="Curriculum vitae of Randeep Dhaliwal" />
+      <title>{metadata.title}</title>
+      {metadata.description && (
+        <meta name="description" content={metadata.description} />
+      )}
       <main>
         <div
           className={styles.page}
@@ -42,4 +59,4 @@ const CvPage = ({ contentHtml }: CvPageProps) => {
   );
 };
 
-export default CvPage;
+export default MarkdownPage;
