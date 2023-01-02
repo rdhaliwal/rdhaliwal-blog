@@ -1,5 +1,3 @@
-
-
 # Curriculum vitae
 
 ## Details
@@ -15,13 +13,15 @@
 - Strong delivery track record using agile & lean practices
 - Dynamic and motivated self starter, with the proven ability to meet set objectives and seek out 'better way to achieve tasks' within a position
 - Loves collaborating with designers to create scalable design experiences, that are also inclusive and accessible
+- Constantly finding ways to collaborate with other teams to reuse and scale code in ways that benefits both teams and the company in general.
 
 ## Qualification Summary
 
-- Developer with a total of 8 years experience, in both frontend and backend development. More experienced in frontend, but have experience with both the design side of things, as well as backend engineering.
-- Understanding of the following broad technologies: React, ES6, GraphQL, Redux, NodesJS, PostCSS, Sass, Ruby/Rails, React Native, iOS, Kubernetes, Datadog, AWS.
+- Senior Developer and Tech Lead with a total of 10 years experience, in both frontend and backend development. More seasoned in frontend development, but have experience with the UX/UI design side of things, as well as backend engineering and architectures.
+- Understanding of the following broad technologies: React, ES6, GraphQL, Redux, NodesJS, PostCSS, Sass, Ruby/Rails, Python, Lambdas, React Native, iOS, Kubernetes, Datadog, AWS.
 - Experience on both large and small scale commercial applications, from research and ideation all the way to release, then continuously delivering, iterating and refining solutions.
 - End to end understanding of a digital eCommerce sites, with experience in SEO, Adwords, A/B Testing, Analytics and User Testing.
+- Experience in sonography and medical apps, including conforming to HIPAA privacy standards and DICOM file interpretation.
 
 ---
 
@@ -29,11 +29,21 @@
 
 ### See Mode
 
-**Senior Software Engineer & Tech Lead // Apr 2021 - Present**
+**Senior Software Engineer & Tech Lead // Apr 2021 - Sep 2022**
 
-- Front end web experience includes React, GraphQL, SASS, Fabric.JS
+- Front end web experience includes React, SPA, GraphQL, SASS, Fabric.JS
 - Back end experience includes Node.JS and Python
 - Infrastructure experience includes AWS (AppSync, Lambdas, CDK, RDS) , Make, Bash, Github Actions
+- Architecture experience includes using the Clean Architecture in the frontend, redesigning the database structure for the entire app, as well as rearchitecting how data was structured, generated and used in both the backend and frontend.
+- Working with designers to build out the design system
+- Collaborating with design and engineering to balance building things scalably, whilst also being flexible and experimental enough for a startup.
+- Mentoring Mid level developers to start thinking how they can balance the immediacy of the short term solution, against the long term scalability and flexibility a startup needs.
+- Mentoring Junior developers by teaching them basics of coding, value of tests as well as guiding them to being to complete work more independently
+
+**Achievements**
+
+- Designed, managed, cowrote and delivered a big change to how data was generated in the backend, read/displayed/edited in the frontend, and then persisted in the database. This project was essential to laying the foundations to all the work completed in 2022.
+- Built off the above work to make the sonography app scale from supporting 3 studies to 12+ studies in about 6 months.
 
 ---
 ### Redbubble
